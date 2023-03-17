@@ -1,12 +1,17 @@
 // import Movies from 'pages/Movies/Movies';
-import MoviesDetails from 'pages/MoviesDetails/MoviesDetails';
+// import MoviesDetails from 'pages/MoviesDetails/MoviesDetails';
 import { lazy } from 'react';
+import { SharedLayout } from './SharedLayout/SharedLayout';
 import { Route, Routes } from 'react-router-dom';
-import Cast from './Cast/Cast';
-import Reviews from './Reviews/Reviews';
-import SharedLayout from './SharedLayout/SharedLayout';
+// import Cast from './Cast/Cast';
+// import Reviews from './Reviews/Reviews';
 const Home = lazy(() => import('../pages/Home/Home'));
 const Movies = lazy(() => import('../pages/Movies/Movies'));
+const Cast = lazy(() => import('./Cast/Cast'));
+const Reviews = lazy(() => import('./Reviews/Reviews'));
+const MoviesDetails = lazy(() =>
+  import('../pages/MoviesDetails/MoviesDetails')
+);
 
 export const App = () => {
   return (
@@ -16,7 +21,7 @@ export const App = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        fontSize: 40,
+        // fontSize: 40,
         color: '#010101',
       }}
     >
