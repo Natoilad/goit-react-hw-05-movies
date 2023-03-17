@@ -25,7 +25,6 @@ const Home = () => {
         <ListMovies movies={movies} />
         {loading && <Loader />}
       </div>
-      ;
     </>
   );
 };
