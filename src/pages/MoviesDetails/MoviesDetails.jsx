@@ -16,7 +16,8 @@ const MoviesDetails = () => {
       setMoviesDetails(respMovieId);
     });
   }, [movieId]);
-  const { poster_path, title, genres, overview, vote_average } = moviesDetails;
+  const { poster_path, title, genres, overview, vote_average, release_date } =
+    moviesDetails;
 
   return (
     <>
@@ -31,8 +32,14 @@ const MoviesDetails = () => {
         ) : (
           <div>Loadind...</div>
         )}
-        <h2>{title}</h2>
-        <p>Score:{vote_average}</p>
+        {title && (
+          <h2>
+            {title} {release_date.substr(0, 4)}
+          </h2>
+        )}
+        {/* {title} ({release_date.substr(0, 4)}) */}
+
+        <p>User Score: {vote_average && Math.floor(vote_average * 10)}%</p>
         <h3>Overview</h3>
         <p>{overview}</p>
         <h4>Genres</h4>

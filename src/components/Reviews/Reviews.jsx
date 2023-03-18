@@ -15,7 +15,7 @@ const Reviews = () => {
 
   return (
     <>
-      {moviesReviews > 0 ? (
+      {moviesReviews.length > 0 ? (
         moviesReviews.map(({ id, author, content }) => {
           return (
             <ul
@@ -30,7 +30,9 @@ const Reviews = () => {
               }}
               key={id}
             >
-              <li>{author}</li>
+              <li>
+                <b> Author: {author}</b>
+              </li>
               <li>{content}</li>
             </ul>
           );

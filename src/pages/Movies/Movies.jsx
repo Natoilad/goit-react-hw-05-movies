@@ -9,7 +9,7 @@ const Movies = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const movieName = searchParams.get('query') ?? '';
   const [movies, setMovies] = useState([]);
-  const [loadind, setLoadind] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -17,26 +17,24 @@ const Movies = () => {
       return;
     }
 
-    setMovies([]);
-    setLoadind(true);
+    setLoading(true);
     fetchSearchMovies(movieName)
       .then(respMovies => {
         setMovies(respMovies.results);
       })
       .catch(error => setError(error))
-      .finally(loadind => setLoadind(false));
+      .finally(loading => setLoading(false));
   }, [movieName]);
   const handleOnSubmit = query => {
     const changeParams = query !== '' ? { query } : {};
     setSearchParams(changeParams);
-    setMovies([]);
   };
   return (
     <div>
       {error && <h2>{error.message}</h2>}
       <SearchInput value={movieName} onSearch={handleOnSubmit} />
       {movies.length > 0 && <ListMovies movies={movies} />}
-      {loadind && <Loader />}
+      {loading && <Loader />}
     </div>
 
     //   // <div>Movies</div>

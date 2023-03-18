@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 export const SearchInput = ({ onSearch }) => {
-  //   console.log(`FUNC? ${onSearch}`);
+  console.log(`FUNC? ${onSearch}`);
   const [query, setQuery] = useState('');
   const changeQuery = evt => {
     setQuery(evt.target.value.toLowerCase());
@@ -11,7 +11,8 @@ export const SearchInput = ({ onSearch }) => {
     if (!query) {
       return alert('Please enter search movies');
     }
-    console.log(onSearch(query));
+
+    // console.log(query);
     onSearch(query);
     setQuery('');
   };

@@ -6,7 +6,7 @@ const Cast = () => {
   const [moviesCast, setMoviesCast] = useState([]);
   const { movieId } = useParams();
 
-  console.dir(moviesCast);
+  // console.dir(moviesCast);
   useEffect(() => {
     fetchCast(movieId).then(respMovieCast => {
       setMoviesCast(respMovieCast.cast);
@@ -38,7 +38,7 @@ const Cast = () => {
             }}
             key={id}
           >
-            {console.log(profile_path)}
+            {/* {console.log(profile_path)} */}
             {profile_path ? (
               <img
                 src={`https://image.tmdb.org/t/p/w200${profile_path}`}
