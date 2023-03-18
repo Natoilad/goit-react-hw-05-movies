@@ -24,26 +24,30 @@ const MoviesDetails = () => {
       <TurningBack to={turningBack} />
       <div>
         {poster_path ? (
-          <img
-            src={`https://image.tmdb.org/t/p/w500${poster_path}`}
-            alt={title}
-            width={350}
-          />
+          <div>
+            <img
+              src={`https://image.tmdb.org/t/p/w500${poster_path}`}
+              alt={title}
+              width={350}
+            />
+          </div>
         ) : (
           <div>Loadind...</div>
         )}
-        {title && (
-          <h2>
-            {title} {release_date.substr(0, 4)}
-          </h2>
-        )}
-        {/* {title} ({release_date.substr(0, 4)}) */}
+        <div>
+          {title && (
+            <h2>
+              {title} {release_date.substr(0, 4)}
+            </h2>
+          )}
+          {/* {title} ({release_date.substr(0, 4)}) */}
 
-        <p>User Score: {vote_average && Math.floor(vote_average * 10)}%</p>
-        <h3>Overview</h3>
-        <p>{overview}</p>
-        <h4>Genres</h4>
-        {genres && <p>{genres.map(genre => genre.name).join(', ')}</p>}
+          <p>User Score: {vote_average && Math.floor(vote_average * 10)}%</p>
+          <h3>Overview</h3>
+          <p>{overview}</p>
+          <h4>Genres</h4>
+          {genres && <p>{genres.map(genre => genre.name).join(', ')}</p>}
+        </div>
         <h5>Additional information</h5>
         <ul
           style={{
