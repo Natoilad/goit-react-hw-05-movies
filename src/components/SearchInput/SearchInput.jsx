@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 export const SearchInput = ({ onSearch }) => {
-  console.log(`FUNC? ${onSearch}`);
+  //   console.log(`FUNC? ${onSearch}`);
   const [query, setQuery] = useState('');
   const changeQuery = evt => {
     setQuery(evt.target.value.toLowerCase());
@@ -18,7 +18,13 @@ export const SearchInput = ({ onSearch }) => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <input type="text" name="query" value={query} onChange={changeQuery} />
+        <input
+          type="text"
+          placeholder="Enter search movie"
+          name="query"
+          value={query}
+          onChange={changeQuery}
+        />
         <button type="submit">search</button>
       </form>
     </div>

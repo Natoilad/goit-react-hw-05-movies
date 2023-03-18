@@ -17,12 +17,17 @@ export const App = () => {
   return (
     <div
       style={{
+        maxWidth: 1100,
+        margin: '0px auto',
+        padding: '0px 16',
         // height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
+        // display: 'flex',
+        // gap: 20,
+        // justifyContent: 'center',
+        // alignItems: 'center',
         // fontSize: 40,
         color: '#010101',
+        padding: '50',
       }}
     >
       <Routes>

@@ -11,7 +11,7 @@ const MoviesDetails = () => {
   // console.log(turningBack);
 
   useEffect(() => {
-    console.log('hello');
+    // console.log('hello');
     fetchDetailsMovie(movieId).then(respMovieId => {
       setMoviesDetails(respMovieId);
     });
@@ -26,7 +26,7 @@ const MoviesDetails = () => {
           <img
             src={`https://image.tmdb.org/t/p/w500${poster_path}`}
             alt={title}
-            width={500}
+            width={350}
           />
         ) : (
           <div>Loadind...</div>
@@ -38,7 +38,13 @@ const MoviesDetails = () => {
         <h4>Genres</h4>
         {genres && <p>{genres.map(genre => genre.name).join(', ')}</p>}
         <h5>Additional information</h5>
-        <ul>
+        <ul
+          style={{
+            display: 'flex',
+            gap: 30,
+            listStyle: 'none',
+          }}
+        >
           <li>
             <Link to="cast">cast</Link>
           </li>

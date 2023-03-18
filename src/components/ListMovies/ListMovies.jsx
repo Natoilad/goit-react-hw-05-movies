@@ -4,10 +4,23 @@ export const ListMovies = ({ movies }) => {
   const location = useLocation();
   return (
     <>
-      <ul>
+      <ul
+        style={{
+          // listStyle: 'none',
+          padding: 0,
+          margin: 0,
+        }}
+      >
         {movies.map(({ id, title }) => {
           return (
-            <li key={id}>
+            <li
+              style={{
+                listStyle: 'none',
+                padding: 3,
+                margin: 0,
+              }}
+              key={id}
+            >
               <Link to={`/movies/${id}`} state={{ from: location }}>
                 {title}
               </Link>
