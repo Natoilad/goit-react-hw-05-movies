@@ -1,5 +1,6 @@
 import { Suspense } from 'react';
 import { Link, Outlet } from 'react-router-dom';
+import { Links } from './SharedLayout.styled';
 
 export const SharedLayout = () => {
   return (
@@ -7,14 +8,14 @@ export const SharedLayout = () => {
       <nav
         style={{
           display: 'flex',
-          // justifyContent: 'space-between',
           gap: 30,
           fontWeight: 700,
           padding: 5,
+          borderBottom: '1px solid',
         }}
       >
-        <Link to="/">Home</Link>
-        <Link to="/movies">Movies</Link>
+        <Links to="/">Home</Links>
+        <Links to="/movies">Movies</Links>
       </nav>
       <Suspense>
         <Outlet />

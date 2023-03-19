@@ -1,17 +1,16 @@
 import { fetchDetailsMovie } from 'service/serviceAPI';
 import { Suspense, useEffect, useState } from 'react';
-import { Link, Outlet, useLocation, useParams } from 'react-router-dom';
+import { Outlet, useLocation, useParams } from 'react-router-dom';
 import { TurningBack } from 'components/TurningBack/TurningBack';
+import { Container, DefoultContainer, Links } from './MoviesDetails.styled';
 
 const MoviesDetails = () => {
   const [moviesDetails, setMoviesDetails] = useState({});
   const { movieId } = useParams();
   const location = useLocation();
   const turningBack = location.state?.from ?? `/movies`;
-  // console.log(turningBack);
 
   useEffect(() => {
-    // console.log('hello');
     fetchDetailsMovie(movieId).then(respMovieId => {
       setMoviesDetails(respMovieId);
     });
@@ -21,48 +20,48 @@ const MoviesDetails = () => {
 
   return (
     <>
-      <TurningBack to={turningBack} />
       <div>
-        {poster_path ? (
-          <div>
-            <img
-              src={`https://image.tmdb.org/t/p/w500${poster_path}`}
-              alt={title}
-              width={350}
-            />
-          </div>
-        ) : (
-          <div>Loadind...</div>
-        )}
-        <div>
-          {title && (
-            <h2>
-              {title} {release_date.substr(0, 4)}
-            </h2>
+        <TurningBack to={turningBack} />
+        <DefoultContainer>
+          {poster_path ? (
+            <div>
+              <img
+                src={`https://image.tmdb.org/t/p/w300${poster_path}`}
+                alt={title}
+                width={300}
+              />
+            </div>
+          ) : (
+            <div>Loadind...</div>
           )}
-          {/* {title} ({release_date.substr(0, 4)}) */}
+          <div>
+            <div>
+              {title && (
+                <h2>
+                  {title} {release_date.substr(0, 4)}
+                </h2>
+              )}
+              {/* {title} ({release_date.substr(0, 4)}) */}
 
-          <p>User Score: {vote_average && Math.floor(vote_average * 10)}%</p>
-          <h3>Overview</h3>
-          <p>{overview}</p>
-          <h4>Genres</h4>
-          {genres && <p>{genres.map(genre => genre.name).join(', ')}</p>}
-        </div>
+              <p>
+                User Score: {vote_average && Math.floor(vote_average * 10)}%
+              </p>
+              <h3>Overview</h3>
+              <p>{overview}</p>
+              <h4>Genres</h4>
+              {genres && <p>{genres.map(genre => genre.name).join(', ')}</p>}
+            </div>
+          </div>
+        </DefoultContainer>
         <h5>Additional information</h5>
-        <ul
-          style={{
-            display: 'flex',
-            gap: 30,
-            listStyle: 'none',
-          }}
-        >
+        <Container>
           <li>
-            <Link to="cast">cast</Link>
+            <Links to="cast">Cast</Links>
           </li>
           <li>
-            <Link to="reviews">reviews</Link>
+            <Links to="reviews">Reviews</Links>
           </li>
-        </ul>
+        </Container>
         <Suspense fallback={<div>Loading...</div>}>
           <Outlet />
         </Suspense>

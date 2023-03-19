@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { AiOutlineSearch } from 'react-icons/ai';
 
 export const SearchInput = ({ onSearch }) => {
   console.log(`FUNC? ${onSearch}`);
@@ -26,7 +27,9 @@ export const SearchInput = ({ onSearch }) => {
           value={query}
           onChange={changeQuery}
         />
-        <button type="submit">search</button>
+        <button type="submit">
+          <AiOutlineSearch size="10" />
+        </button>
       </form>
     </div>
   );

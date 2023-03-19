@@ -28,6 +28,7 @@ export const App = () => {
         // fontSize: 40,
         color: '#010101',
         // padding: '50',
+        // borderTop: '1px solid',
       }}
     >
       <Routes>
