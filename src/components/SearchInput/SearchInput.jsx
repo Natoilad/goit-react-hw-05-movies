@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
+import { Button } from './SearchInput.styled';
 
 export const SearchInput = ({ onSearch }) => {
-  console.log(`FUNC? ${onSearch}`);
   const [query, setQuery] = useState('');
   const changeQuery = evt => {
     setQuery(evt.target.value.toLowerCase());
@@ -12,14 +12,18 @@ export const SearchInput = ({ onSearch }) => {
     if (!query) {
       return alert('Please enter search movies');
     }
-
-    // console.log(query);
     onSearch(query);
     setQuery('');
   };
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form
+        style={{
+          paddingTop: 20,
+          paddingBottom: 20,
+        }}
+        onSubmit={handleSubmit}
+      >
         <input
           type="text"
           placeholder="Enter search movie"
@@ -27,9 +31,9 @@ export const SearchInput = ({ onSearch }) => {
           value={query}
           onChange={changeQuery}
         />
-        <button type="submit">
-          <AiOutlineSearch size="10" />
-        </button>
+        <Button type="submit">
+          <AiOutlineSearch size="13" />
+        </Button>
       </form>
     </div>
   );

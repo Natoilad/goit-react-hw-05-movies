@@ -3,6 +3,7 @@
 import { lazy } from 'react';
 import { SharedLayout } from './SharedLayout/SharedLayout';
 import { Route, Routes } from 'react-router-dom';
+import { Container } from './App.styled';
 // import Cast from './Cast/Cast';
 // import Reviews from './Reviews/Reviews';
 const Home = lazy(() => import('../pages/Home/Home'));
@@ -15,22 +16,7 @@ const MoviesDetails = lazy(() =>
 
 export const App = () => {
   return (
-    <div
-      style={{
-        maxWidth: 1100,
-        margin: '0px auto',
-        padding: '0px 16',
-        // height: '100vh',
-        // display: 'flex',
-        // gap: 20,
-        // justifyContent: 'center',
-        // alignItems: 'center',
-        // fontSize: 40,
-        color: '#010101',
-        // padding: '50',
-        // borderTop: '1px solid',
-      }}
-    >
+    <Container>
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<Home />} />
@@ -42,8 +28,6 @@ export const App = () => {
           <Route path="*" element={<Home />} />
         </Route>
       </Routes>
-    </div>
-
-    // React homework template
+    </Container>
   );
 };

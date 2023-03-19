@@ -36,8 +36,6 @@ const Movies = () => {
       {movies.length > 0 && <ListMovies movies={movies} />}
       {loading && <Loader />}
     </div>
-
-    //   // <div>Movies</div>
   );
 };
 export default Movies;
