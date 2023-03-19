@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { useState } from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { Button } from './SearchInput.styled';
@@ -39,3 +41,6 @@ export const SearchInput = ({ onSearch }) => {
   );
 };
 export default SearchInput;
+SearchInput.propTypes = {
+  onSearch: PropTypes.func.isRequired,
+};
