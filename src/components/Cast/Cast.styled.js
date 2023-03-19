@@ -6,7 +6,7 @@ export const CastContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: flex-start;
+  justify-content: center;
 `;
 
 export const CastCard = styled.div`
