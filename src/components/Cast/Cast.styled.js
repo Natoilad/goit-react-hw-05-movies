@@ -19,9 +19,10 @@ export const CastCard = styled.div`
   flex-direction: column;
   border: 1px solid;
   @media (max-width: 600px) {
+    zoom: 1.5;
     // scale 1.5;
-    width: 350px;
-    height: 600px;
+    // width: 350px;
+    // height: 600px;
   }
 `;
 export const P = styled.p`
