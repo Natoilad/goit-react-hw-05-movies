@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/goit-react-hw-05-movies/static/css/main.7acaea2f.css",
-    "main.js": "/goit-react-hw-05-movies/static/js/main.b1294235.js",
+    "main.js": "/goit-react-hw-05-movies/static/js/main.fd8651dc.js",
     "static/js/544.a0736881.chunk.js": "/goit-react-hw-05-movies/static/js/544.a0736881.chunk.js",
     "static/js/932.7fc0aa9d.chunk.js": "/goit-react-hw-05-movies/static/js/932.7fc0aa9d.chunk.js",
-    "static/js/387.d1c9fb55.chunk.js": "/goit-react-hw-05-movies/static/js/387.d1c9fb55.chunk.js",
+    "static/js/387.7389a2b1.chunk.js": "/goit-react-hw-05-movies/static/js/387.7389a2b1.chunk.js",
     "static/js/779.ad046ecc.chunk.js": "/goit-react-hw-05-movies/static/js/779.ad046ecc.chunk.js",
     "static/js/562.5986def3.chunk.js": "/goit-react-hw-05-movies/static/js/562.5986def3.chunk.js",
     "static/js/279.c366b045.chunk.js": "/goit-react-hw-05-movies/static/js/279.c366b045.chunk.js",
@@ -12,10 +12,10 @@
     "static/js/853.b9643f29.chunk.js": "/goit-react-hw-05-movies/static/js/853.b9643f29.chunk.js",
     "index.html": "/goit-react-hw-05-movies/index.html",
     "main.7acaea2f.css.map": "/goit-react-hw-05-movies/static/css/main.7acaea2f.css.map",
-    "main.b1294235.js.map": "/goit-react-hw-05-movies/static/js/main.b1294235.js.map",
+    "main.fd8651dc.js.map": "/goit-react-hw-05-movies/static/js/main.fd8651dc.js.map",
     "544.a0736881.chunk.js.map": "/goit-react-hw-05-movies/static/js/544.a0736881.chunk.js.map",
     "932.7fc0aa9d.chunk.js.map": "/goit-react-hw-05-movies/static/js/932.7fc0aa9d.chunk.js.map",
-    "387.d1c9fb55.chunk.js.map": "/goit-react-hw-05-movies/static/js/387.d1c9fb55.chunk.js.map",
+    "387.7389a2b1.chunk.js.map": "/goit-react-hw-05-movies/static/js/387.7389a2b1.chunk.js.map",
     "779.ad046ecc.chunk.js.map": "/goit-react-hw-05-movies/static/js/779.ad046ecc.chunk.js.map",
     "562.5986def3.chunk.js.map": "/goit-react-hw-05-movies/static/js/562.5986def3.chunk.js.map",
     "279.c366b045.chunk.js.map": "/goit-react-hw-05-movies/static/js/279.c366b045.chunk.js.map",
@@ -24,6 +24,6 @@
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.b1294235.js"
+    "static/js/main.fd8651dc.js"
   ]
 }
