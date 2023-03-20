@@ -10,15 +10,18 @@ export const CastContainer = styled.div`
 `;
 
 export const CastCard = styled.div`
-  width: 350px;
+  width: 180px;
+
   border: 1px solid;
   padding: 10px;
   justify-content: space-between;
   display: flex;
   flex-direction: column;
   border: 1px solid;
-  @media (min-width: 600px) {
-    width: 180px;
+  @media (max-width: 600px) {
+    // scale 1.5;
+    width: 350px;
+    height: 600px;
   }
 `;
 export const P = styled.p`
