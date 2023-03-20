@@ -20,7 +20,10 @@ export const Links = styled(Link)`
   }
 `;
 export const DefoultContainer = styled.div`
-  display: flex;
+  display: 'block';
   gap: 50px;
   border-bottom: 1px solid;
+  @media (min-width: 600px) {
+    display: flex;
+  }
 `;
