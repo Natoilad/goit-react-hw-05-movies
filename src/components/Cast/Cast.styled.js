@@ -10,7 +10,7 @@ export const CastContainer = styled.div`
 `;
 
 export const CastCard = styled.div`
-  width: 70%;
+  width: 350px;
   border: 1px solid;
   padding: 10px;
   justify-content: space-between;
