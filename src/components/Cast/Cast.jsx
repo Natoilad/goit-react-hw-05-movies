@@ -23,7 +23,7 @@ const Cast = () => {
               <img
                 src={`https://image.tmdb.org/t/p/w200${profile_path}`}
                 alt={name}
-                width={180}
+                // width={180}
               />
             ) : (
               <AiOutlineFileImage size={200} />

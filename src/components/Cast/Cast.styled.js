@@ -10,13 +10,16 @@ export const CastContainer = styled.div`
 `;
 
 export const CastCard = styled.div`
+  width: 90%;
   border: 1px solid;
   padding: 10px;
-  width: 180px;
   justify-content: space-between;
   display: flex;
   flex-direction: column;
   border: 1px solid;
+  @media (min-width: 600px) {
+    width: 180px;
+  }
 `;
 export const P = styled.p`
   margin: 5px;
