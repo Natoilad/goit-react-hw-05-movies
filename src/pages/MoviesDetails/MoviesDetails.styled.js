@@ -10,13 +10,14 @@ display: flex;
     color:black;
 }`;
 export const Links = styled(Link)`
+  outline: black solid 2px;
+  border-radius: 4px;
   color: black;
   padding: 5px;
   text-decoration: none;
   :hover {
     background: black;
     color: white;
-    border-radius: 4px;
   }
 `;
 export const DefoultContainer = styled.div`

@@ -2,6 +2,8 @@ import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 
 export const Button = styled.button`
+  outline: black solid 2px;
+  border-radius: 4px;
   background: transparent;
   border: none;
   margin: 10px;
@@ -14,7 +16,6 @@ export const Button = styled.button`
   :hover {
     color: white;
     background: black;
-    border-radius: 4px;
   }
 `;
 export const LinkGoBack = styled(Link)`
