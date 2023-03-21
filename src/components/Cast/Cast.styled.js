@@ -9,13 +9,13 @@ export const CastContainer = styled.div`
   justify-content: center;
 
   @media (max-width: 600px) {
-    justify-content: center;
+    justπify-content: center;
   }
 `;
 
 export const CastCard = styled.div`
   width: 180px;
-
+  margin-bottom: 5px;
   border: 1px solid;
   padding: 10px;
   justify-content: space-between;
