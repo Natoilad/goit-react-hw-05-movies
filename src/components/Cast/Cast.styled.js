@@ -7,6 +7,10 @@ export const CastContainer = styled.div`
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+
+  @media (max-width: 600px) {
+    justify-content: center;
+  }
 `;
 
 export const CastCard = styled.div`

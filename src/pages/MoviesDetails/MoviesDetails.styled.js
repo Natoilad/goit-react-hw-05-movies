@@ -10,6 +10,7 @@ display: flex;
     color:black;
 }`;
 export const Links = styled(Link)`
+  margin: 10px;
   outline: black solid 2px;
   border-radius: 4px;
   color: black;
