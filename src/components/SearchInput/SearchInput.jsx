@@ -21,6 +21,7 @@ export const SearchInput = ({ onSearch }) => {
     <div>
       <form
         style={{
+          textAlign: 'center',
           paddingTop: 20,
           paddingBottom: 20,
         }}

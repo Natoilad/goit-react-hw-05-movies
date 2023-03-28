@@ -9,7 +9,7 @@ export const CastContainer = styled.div`
   justify-content: center;
 
   @media (max-width: 600px) {
-    justπify-content: center;
+    justify-content: 'center';
   }
 `;
 
@@ -22,6 +22,9 @@ export const CastCard = styled.div`
   display: flex;
   flex-direction: column;
   border: 1px solid;
+  :hover {
+    scale: 1.1;
+  }
   @media (max-width: 600px) {
     zoom: 1.5;
     // scale 1.5;

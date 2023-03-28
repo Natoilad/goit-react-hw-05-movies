@@ -21,7 +21,15 @@ const Home = () => {
   return (
     <>
       <div>
-        <h2>Trending today</h2>
+        <h2
+          style={{
+            textAlign: 'center',
+            paddingTop: 20,
+            paddingBottom: 20,
+          }}
+        >
+          Trending today
+        </h2>
         <ListMovies movies={movies} />
         {loading && <Loader />}
       </div>

@@ -8,6 +8,7 @@ export const SharedLayout = () => {
       <nav
         style={{
           display: 'flex',
+          justifyContent: 'center',
           gap: 30,
           fontWeight: 700,
           padding: 5,
